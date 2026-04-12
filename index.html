@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Gasiokwu Ayomide | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #020617;
+}
+
+nav h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2{
+    font-size: 40px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: 1e293b;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+ <nav>
+     <h1>Michael</h1>
+     <div>
+         <a href="#about">About</a>
+         <a href="#skills">Skills</a>
+         <a href="#projects">Projects</a>
+         <a href="#contact">Contact</a>
+     </div>
+ </nav>
+
+ <!-- HERO -->
+ <div class="hero">
+    <h2>Hi, Name's <span>Michael</span></h2>
+    <p>Python Developer | Cybersecurity Enthusiast</p>
+    <a href="#projects" class="btn">View Projects</a>
+ </div>
+
+ <!-- ABOUT -->
+ <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align: center; max-width: 600px; margin: auto;">
+        I am a developer with a strong interest in cybersecurity and software development.
+        I build practical tools and enjoy working with python, Linux systems and web technologies.
+    </p>
+ </section>
+
+ <!-- SKILLS -->
+ <section id="skills">
+    <h2 class=""section-title">Skills</h2>
+    <div class="skills">
+
+        <div class="card">
+            <h3>Programming</h3>
+            <p>Python, Flask</p>
+        </div>
+
+        <div class="card">
+            <h3>Cybersecurity</h3>
+            <p>Port Scanning, Network Analysis, Linux</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="card">
+            <h3>Design</h3>
+            <p>Figma, Canva</p>
+        </div>
+
+        <div class="card">
+            <h3>Other</h3>
+            <p>Game Development, Game Testing</p>
+        </div>
+    </div>
+ </section>
+
+ <!-- PROJECTS -->
+ <section id="projects">
+     <h2 class="section-title">Projects</h2>
+     <div class="projects">
+
+        <div class="card">
+            <h3>AI Resume Analyzer</h3>
+            <p>Analyzes resumes and gives feedback using AI logic.</p>
+            <a href="#" class="btn">Github</a>
+        </div>
+
+        <div class="card">
+            <h3>Python Port Scanner</h3>
+            <p>Scans open ports using pocket programming.</p>
+            <a href="#" class="btn">Github</a>
+        </div>
+
+     </div>
+ </section>
+
+ <!-- CONTACT -->
+ <section id="Contact">
+    <h2 class="section-title">Contact</h2>
+    <p style="text-align: center;">
+        Email: gasiokwumichael@gmail.com <br>
+        Github: github.com/Mikxy004
+    </p>
+ </section>
+
+ <!-- FOOTER -->
+ <footer>
+    <p>© 2026 Michael Gasiokwu</p>
+ </footer>
+ 
+</body>
+</html>
