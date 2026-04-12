@@ -3,198 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michael Gasiokwu Ayomide | Portfolio</title>
+<title>Michael | Cybersecurity Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 body {
-    background: #0f172a;
-    color: white;
+    background: #000;
+    color: #00ff88;
 }
 
-/* NAVBAR */
+/* GLITCH HEADER */
+.header {
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid #00ff88;
+}
+
+.header h1 {
+    font-size: 40px;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+.header p {
+    color: #66ffb2;
+    margin-top: 10px;
+}
+
+/* NAV */
 nav {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #020617;
-}
-
-nav h1 {
-    color: #38bdf8;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    border-bottom: 1px solid #00ff88;
 }
 
 nav a {
-    color: white;
+    color: #00ff88;
     text-decoration: none;
-    margin-left: 20px;
+    transition: 0.3s;
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h2{
-    font-size: 40px;
-}
-
-.hero span {
-    color: #38bdf8;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #38bdf8;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
+nav a:hover {
+    text-shadow: 0 0 10px #00ff88;
 }
 
 /* SECTIONS */
 section {
-    padding: 60px 40px;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-.section-title {
+.title {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 22px;
+    text-shadow: 0 0 8px #00ff88;
 }
 
-/* SKILLS */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: 1e293b;
+/* TERMINAL BOX */
+.box {
+    background: #050505;
+    border: 1px solid #00ff88;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-/* PROJECTS */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00ff88;
+    color: black;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
+    border-top: 1px solid #00ff88;
+    color: #66ffb2;
+}
+
+/* BLINK CURSOR */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background: #00ff88;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
- <nav>
-     <h1>Michael</h1>
-     <div>
-         <a href="#about">About</a>
-         <a href="#skills">Skills</a>
-         <a href="#projects">Projects</a>
-         <a href="#contact">Contact</a>
-     </div>
- </nav>
+<div class="header">
+    <h1>ACCESS GRANTED</h1>
+    <p>Michael@cybersec-node:~$</p>
+    <p>Ethical Hacker | Python Dev | Security Analyst</p>
+</div>
 
- <!-- HERO -->
- <div class="hero">
-    <h2>Hi, Name's <span>Michael</span></h2>
-    <p>Python Developer | Cybersecurity Enthusiast</p>
-    <a href="#projects" class="btn">View Projects</a>
- </div>
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
- <!-- ABOUT -->
- <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p style="text-align: center; max-width: 600px; margin: auto;">
-        I am a developer with a strong interest in cybersecurity and software development.
-        I build practical tools and enjoy working with python, Linux systems and web technologies.
-    </p>
- </section>
+<!-- ABOUT -->
+<section id="about">
+    <div class="title">[ ABOUT USER SYSTEM ]</div>
+    <div class="box">
+        > Initializing profile...<br>
+        > User: Michael<br>
+        > Role: Cybersecurity Enthusiast / Python Developer<br>
+        > Status: ACTIVE<br><br>
 
- <!-- SKILLS -->
- <section id="skills">
-    <h2 class=""section-title">Skills</h2>
-    <div class="skills">
-
-        <div class="card">
-            <h3>Programming</h3>
-            <p>Python, Flask</p>
-        </div>
-
-        <div class="card">
-            <h3>Cybersecurity</h3>
-            <p>Port Scanning, Network Analysis, Linux</p>
-        </div>
-
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript</p>
-        </div>
-
-        <div class="card">
-            <h3>Design</h3>
-            <p>Figma, Canva</p>
-        </div>
-
-        <div class="card">
-            <h3>Other</h3>
-            <p>Game Development, Game Testing</p>
-        </div>
+        I specialize in cybersecurity tools, Python automation, and network analysis.
+        I build systems that simulate real-world security operations and penetration testing environments.
+        <br><br>
+        <span class="cursor"></span>
     </div>
- </section>
+</section>
 
- <!-- PROJECTS -->
- <section id="projects">
-     <h2 class="section-title">Projects</h2>
-     <div class="projects">
+<!-- SKILLS -->
+<section id="skills">
+    <div class="title">[ SYSTEM CAPABILITIES ]</div>
 
-        <div class="card">
-            <h3>AI Resume Analyzer</h3>
-            <p>Analyzes resumes and gives feedback using AI logic.</p>
-            <a href="#" class="btn">Github</a>
-        </div>
+    <div class="box">
+        > Python Scripting<br>
+        > Port Scanning & Network Recon<br>
+        > Linux (Ubuntu Terminal Operations)<br>
+        > Web Development (HTML/CSS/JS)<br>
+        > Figma / Canva Design Tools<br>
+        > Game Testing & Development<br>
+    </div>
+</section>
 
-        <div class="card">
-            <h3>Python Port Scanner</h3>
-            <p>Scans open ports using pocket programming.</p>
-            <a href="#" class="btn">Github</a>
-        </div>
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="title">[ ACTIVE PROJECTS ]</div>
 
-     </div>
- </section>
+    <div class="box">
+        <b>AI Resume Analyzer</b><br>
+        > Scans resumes and evaluates job match score using AI logic<br>
+        > Python-based processing engine<br>
+        <a class="btn" href="#">GitHub</a>
+    </div>
 
- <!-- CONTACT -->
- <section id="Contact">
-    <h2 class="section-title">Contact</h2>
-    <p style="text-align: center;">
-        Email: gasiokwumichael@gmail.com <br>
-        Github: github.com/Mikxy004
-    </p>
- </section>
+    <div class="box">
+        <b>Python Port Scanner</b><br>
+        > Network scanning tool for open port detection<br>
+        > Built using socket programming<br>
+        <a class="btn" href="#">GitHub</a>
+    </div>
+</section>
 
- <!-- FOOTER -->
- <footer>
-    <p>© 2026 Michael Gasiokwu</p>
- </footer>
- 
+<!-- CONTACT -->
+<section id="contact">
+    <div class="title">[ SECURE CONTACT NODE ]</div>
+
+    <div class="box">
+        Email: gasiokwumichael@gmail.com<br>
+        GitHub: https://github.com/Mikxy004<br>
+        Portfolio: https://Mikxy004.github.io/Michael-s-Portfolio/<br>
+    </div>
+</section>
+
+<footer>
+    SYSTEM LOG OUT... CONNECTION SECURE ✔
+</footer>
+
 </body>
 </html>
+ 
