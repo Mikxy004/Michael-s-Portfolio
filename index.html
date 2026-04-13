@@ -135,7 +135,7 @@ body {
 }
 
 .header h1 {
-    animation: glitch is infinite;
+    animation: glitch 1s infinite;
 }
 
 @keyframes glitch {
@@ -143,13 +143,30 @@ body {
     25% { text-shadow: -2px -2px #00ff88; }
     50% { text-shadow: 2px 2px #00ff88; }
     75% { text-shadow: -2px -2px #00ff88; }
-    1000% { text-shadow: 2px 2px #00ff88; }
+    100% { text-shadow: 2px 2px #00ff88; }
 }
 
+#login-screen {
+    background: black;
+    color: #00ff88;
+    height: 100vh;
+    font-size: 16px;
+}
+
+#input {
+    font-family: monospace;
+}
 </style>
 </head>
 
 <body>
+
+<div id="login-screen" style="padding:40px;">
+<pre id="terminal"></pre>
+<input id="input" autofocus style="background:black; border:none; color:#00ff88; outline:none; width:100%;">
+</div>
+
+<div id="main-content" style="display:none;">
 
 <div class="header">
     <h1>ACCESS GRANTED</h1>
@@ -256,7 +273,7 @@ function type() {
 
         if (j == text[i].length) {
             isDeleting = true;
-            settimeout(type, 1000);
+            setTimeout(type, 1000);
             return;
         }
 
@@ -271,5 +288,46 @@ function type() {
 
 type();
 </script>
+
+<script>
+window.onload = function() {
+
+const terminal = document.getElementById("terminal");
+const input = document.getElementById("input");
+
+let step = 0;
+let username = "";
+
+terminal.innerHTML = "Initializing system...\nAccessing secure server...\n\nlogin: ";
+
+input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        let value = input.value;
+        terminal.innerHTML += value + "\n";
+        input.value = "";
+
+        if (step === 0) {
+            username = value;
+            terminal.innerHTML += "password: ";
+            step++;
+        } else if (step === 1) {
+            terminal.innerHTML += "\nAuthenticating...\n";
+
+            setTimeout(() => {
+                terminal.innerHTML += "Access Granted ✔\n\nLoading system...\n";
+
+                setTimeout(() => {
+                    document.getElementById("login-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }, 1500);
+
+            }, 1000);
+        }
+    }
+});
+
+};
+</script>
+</div>
 </body>
 </html>
