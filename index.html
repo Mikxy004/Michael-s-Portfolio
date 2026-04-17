@@ -147,10 +147,7 @@ body {
 }
 
 #login-screen {
-    background: black;
-    color: #00ff88;
-    height: 100vh;
-    font-size: 16px;
+    background: rgba(0, 0, 0, 0.95);
 }
 
 #input {
@@ -162,10 +159,31 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+
+    opacity: 0;
+    transition: opacity 1.5s ease;
 }
 
 #main-content {
     background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(3px);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0,255,136,0.03),
+        rgba(0,255,136,0.03) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
 }
 </style>
 </head>
@@ -183,7 +201,7 @@ body {
     <h1>ACCESS GRANTED</h1>
     <p id= "typing"></p>
     <p>Michael@cybersec-node:~$</p>
-    <p>Ethical Hacker | Python Dev | Security Analyst</p>
+    <p>Cybersecurity Enthusiast | Python Developer | Security Analyst | Building Security Tools & Automation Systems</p>
 </div>
 
 <nav>
@@ -249,8 +267,9 @@ body {
 
     <div class="box">
         Email: gasiokwumichael@gmail.com<br>
-        GitHub: https://github.com/Mikxy004<br>
-        Portfolio: https://Mikxy004.github.io/Michael-s-Portfolio/<br>
+        Github: https://github.com/Mikxy004<br>
+        Portfolio: https://mikxy004.github.io/Michael-s-Portfolio<br>
+        <a class="btn" href="GASIOKWU MICHAEL AYOMIDE RESUME (CV).rtf" download>Download CV</a>
     </div>
 </section>
 
@@ -304,42 +323,50 @@ type();
 <script>
 window.onload = function() {
 
-document.getElementById("matrix").style.display = "none";
+    document.getElementById("matrix").style.opacity = "0";
 
-const terminal = document.getElementById("terminal");
-const input = document.getElementById("input");
+    const terminal = document.getElementById("terminal");
+    const input = document.getElementById("input");
 
-let step = 0;
-let username = "";
+    let step = 0;
 
-terminal.innerHTML = "Initializing system...\nAccessing secure server...\n\nlogin: ";
+    terminal.innerHTML = "Initializing system...\nAccessing secure server...\n\nlogin: ";
 
-input.addEventListener("keydown", function(e) {
-    if (e.key === "Enter") {
-        let value = input.value;
-        terminal.innerHTML += value + "\n";
-        input.value = "";
+    input.addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            let value = input.value;
+            terminal.innerHTML += value + "\n";
+            input.value = "";
 
-        if (step === 0) {
-            username = value;
-            terminal.innerHTML += "password: ";
-            step++;
-        } else if (step === 1) {
-            terminal.innerHTML += "\nAuthenticating...\n";
+            if (step === 0) {
+                terminal.innerHTML += "password: ";
+                step++;
 
-            setTimeout(() => {
-                terminal.innerHTML += "Access Granted ✔\n\nLoading system...\n";
+            } else if (step === 1) {
+                terminal.innerHTML += "\nAuthenticating...\n";
 
                 setTimeout(() => {
-                    document.getElementById("login-screen").style.display = "none";
-                    document.getElementById("main-content").style.display = "block";
-                    document.getElementById("matrix").style.display = "block";
-                }, 1500);
+                    terminal.innerHTML += "Access Granted ✔\n\nLoading system...\n";
 
-            }, 1000);
+                    setTimeout(() => {
+
+                       
+                        document.getElementById("login-screen").style.display = "none";
+
+                      
+                        document.getElementById("main-content").style.display = "block";
+
+                      
+                        setTimeout(() => {
+                            document.getElementById("matrix").style.opacity = "1";
+                        }, 300);
+
+                    }, 1500);
+
+                }, 1000);
+            }
         }
-    }
-});
+    });
 
 };
 </script>
@@ -390,7 +417,7 @@ function drawMatrix() {
     ctx.fillStyle = "rgba(0,0,0,0.05)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "rgba(0, 255, 136, 0.25)";
+    ctx.fillStyle = "rgba(0, 255, 136, 0.15)";
     ctx.font = fontSize + "px monospace";
 
     for (let i = 0; i < drops.length; i++) {
@@ -405,7 +432,7 @@ function drawMatrix() {
     }
 }
 
-setInterval(drawMatrix, 60);
+setInterval(drawMatrix, 80);
 
 });
 </script>
